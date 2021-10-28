@@ -1,0 +1,344 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    color: #183a68;
+    font-family: sans-serif;
+    --blue:#183a68;
+    --red:#c52032;
+}
+#container{
+    display: grid;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+}
+section{
+    margin-bottom: 6rem;
+}
+section h1{
+    font-size: 2.5rem;
+}
+a{
+    text-decoration: none;
+    transition: 1s;
+}
+a:hover{
+    color: var(--red);
+}
+header a{
+    font-size:large;
+    margin: 1rem;
+}
+header div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+header{
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    margin-bottom: 4rem;
+}
+.get-start-button{
+    background-color: var(--red);
+    font-size:medium;
+    color: white;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 2rem;
+}
+.get-start-button:hover{
+    cursor: pointer;
+    transition: 1s;
+    background-color: var(--blue);
+}
+span{
+    color: var(--red);
+}
+#get-started{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    justify-items: auto;
+    margin-bottom: 8rem;
+}
+#get-started div img{
+    display: block;
+    position: absolute;
+    transition: 1s;
+    z-index: -1;
+}
+#get-started div:hover img:first-child{
+    transform:scale(0.9) rotate(45deg);
+}
+#get-started div:hover img:nth-child(2){
+    transform:scale(0.9) rotate(-45deg)
+}
+#get-started div:hover img:last-child{
+    transform:scale(0.9) translateY(-20px);
+}
+#get-started h1{
+    font-size: 3rem;
+    line-height: 1.5;
+    margin: 0px 0px 27px 0;
+    grid-area: 1 / 1 / 2 / 2;
+    justify-self: start;
+    align-self: start;
+}
+#get-started p{
+    font-size: 1.5rem;
+    margin: 0px 0px 37px 0;
+    grid-area: 2 / 1 / 3 / 2;
+    justify-self: start;
+    align-self: start;
+}
+#get-started .get-start-button{
+    grid-area: 3 / 1 / 3 / 2;
+    font-size: large;
+    justify-self: start;
+    align-self: start;
+    padding: 1rem 2rem;
+}
+#get-started div{
+    grid-area: 1 / 2 / 4 / 3;
+    display: flex;
+    justify-content: center;
+}
+#how-it-works{
+    background-color: var(--blue);
+    padding: 2rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+#how-it-works .head{
+    height: fit-content;
+    padding: 5%;
+}
+#how-it-works h1{
+    color: white;
+    margin-bottom: 2rem;
+}
+#how-it-works .cards p{
+    font-size: large;
+}
+#how-it-works .head p{
+    font-size: 1.5rem;
+    color: white;
+}
+#how-it-works .cards{
+    background-color: white;
+    border-radius: 5px;
+    height: 50vh;
+    width: 75%;
+    margin: 1rem;
+    display: grid;
+    justify-content: stretch;
+    grid-template-rows: 3fr 1fr 1.5fr;
+}
+
+/* selecting all elements other than image */
+.cards>*:not(img){
+    margin: 0rem 2rem;
+}
+.from-right{
+    animation: toRight 2s forwards;
+}
+@keyframes toRight {
+    from{
+        opacity: 0;
+        transform: translate(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+#journey{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    padding: 0 3rem;
+}
+#journey p{
+    font-size: 1.3rem;
+    line-height: 2;
+}
+#journey a{
+    grid-area: 2/2/3/3;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+#assesment{
+    display: grid;
+    height: 80vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 5fr 5fr;
+}
+#assesment .cards{
+    background-color: var(--blue);
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+#assesment .cards *{
+    color: white;
+}
+#assesment h1{
+    grid-area: 1/1/2/4;
+    text-align: center;
+}
+#trial{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+#trial h1{
+    margin-right: 9rem;
+}
+#trial button{
+    font-size: large;
+    padding: 0.7rem 3rem;
+}
+#reasons{
+    background-color: var(--blue);
+    padding: 3rem;
+    height: 100vh;
+}
+#reasons h1{
+    width: 50%;
+    color: white;
+    margin-bottom: 3rem;
+}
+#reasons .box{
+    height: 60vh;
+    position: relative;
+}
+.box:hover .cards{
+    display: flex;
+}
+.box .cards{
+    background-color: var(--red);
+    height: 100%;
+    display: none;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    animation: toRight 1s forwards;
+    /* position: absolute; */
+}
+.box img{
+    margin: 2rem;
+    display: inline-block;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.box u{
+    margin: 1rem;
+}
+.box p{
+    font-size: 1.2rem;
+}
+#reasons .cards *{
+    color: white;
+}
+#reasons>div{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+#collaboration{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3,1fr);
+}
+#collaboration p{
+    font-size: 1.5rem;
+}
+#collaboration img{
+    grid-area: 1/2/3/3;
+    align-self: center;
+    justify-self: center;
+}
+#quotes>div{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 0 2rem;
+}
+#quotes h1{
+    width: 40%;
+}
+#quotes .cards{
+    display: grid;
+    grid-template-rows: 3fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+#quotes img{
+    border-radius: 200px;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer *{
+    margin: 5px;
+}
+@media only screen and (max-width: 600px){
+    #how-it-works .cards{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 800px){
+    #get-started div img{
+        display: none;
+    }
+    #get-started{
+        grid-template-columns: 1fr;
+    }
+    #reasons{
+        width: auto;
+        height: fit-content;
+    }
+    .box{
+        width: auto;
+    }
+    #reasons>div{
+        grid-template-columns: 1fr;
+    }
+    #assesment{
+        grid-template-columns: 1fr 1fr;
+    }
+    #assesment h1{
+        grid-area: 1/1/2/3;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 900px){
+    #how-it-works{
+        grid-template-columns: 1fr;
+    }
+}
+@media only screen and (max-width: 1100px){
+    #container{
+        width: 95%;
+    }
+    #get-started div img{
+        right: 10%;
+    }
+}
